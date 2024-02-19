@@ -1,0 +1,4 @@
+Using Flask-Caching
+method to clear cache : cache.clear()
+method to delete cache : cache.delete("name of the key")
+metod to add cache : cache.add("key","value",timeout=50)

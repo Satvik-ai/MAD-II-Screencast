@@ -1,0 +1,28 @@
+<!--Introduction to VueJS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <!--<div>Hello World</div> # 1st way-->
+    <!--<div id="app"></div> # 2nd way. element refrenced by ID in application.js -->
+    <!--3rd way--> 
+    <div id="app">
+        <p>{{ message }}</p>
+        Your name : <input type="text" v-model="visitor_name"> <!-- visitor_name is an attribute used to send data from html to vue app.-->
+        <p v-if="count == 0">No replies yet </p>
+        <p v-else-if="count >= 5">You are very popular. No of replies {{count}} </p>
+        <p v-else>Number of replies {{ count }} </p>
+        <button v-on:click="sayHi">Say Hi</button> <!--sayHi is a method in Vue app. v-on is used to add event handler. click is a event.-->
+        <ul>
+            <li v-for="name in visitor">{{name}}</li>
+        </ul>
+    </div>
+</body>
+<script src="application.js"></script> <!-- Inclusion of JS file in html file. -->
+</html>
